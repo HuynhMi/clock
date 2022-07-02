@@ -1,40 +1,56 @@
-/*
-1. css for numbers
-2. css for hand
-3.setTimeout để đồng hồ chạy
-*/
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-const numberElements = $$('.number');
-const hourHandElement = $('#hand-hour');
-const minuteHandElement = $('#hand-minute');
-const secondHandElement = $('#hand-second');
 
-const app = {
-    displayNumbers : function() {
-        let deg = 0;
-        numberElements.forEach(function(element) {
-            element.style.transform = `rotate(${deg}deg)`
-            deg += 30;
-        })
-    },
-    handleTimer: function() {
-        const date = new Date();
-        let [hours, minutes, second] = [date.getHours(), date.getMinutes(), date.getSeconds()];
-        let hourDegs = hours*(360/12) + minutes*1/2;
-        hourHandElement.style.transform = `rotate(${hourDegs}deg)`;
-        let minutesDeg = minutes*(360/60);
-        minuteHandElement.style.transform = `rotate(${minutesDeg}deg)`;
-        let secondsDeg = second*(360/60);
-        secondHandElement.style.transform = `rotate(${secondsDeg}deg)`;
-    },
-    start: function() {
-        _this = this;
-        _this.displayNumbers();
-        setInterval(function() {
-            _this.handleTimer();
-        }, 500);
+const btnNavOpen = $('.nav__btn--open');
+const navElement = $('.nav');
+const navListElement = $('.nav__list');
+const linkElements = $$('.nav__link');
+const containerElement = $('.container');
+const btnToTop = $('.btn-go-to-top');
+
+btnNavOpen.onclick = function() {
+    const heightNavList = Array.from(navListElement.children).reduce(function(total, element) {
+        return total + element.clientHeight;
+    },0);
+    const spanElement = this.firstElementChild;
+    if (spanElement.innerText === 'menu') {
+        navListElement.style.height = heightNavList + 'px';
+        spanElement.innerText = 'close';
+    } else {
+        navListElement.style.height = 0 + 'px';
+        spanElement.innerText = 'menu';
     }
 }
 
-app.start();
+window.onscroll = function() {
+    const scrollY = window.scrollY;
+    console.log(scrollY);
+    if (scrollY > 400) {
+        btnToTop.classList.add('show');
+    } else {
+        btnToTop.classList.remove('show');
+    }
+}
+
+btnToTop.onclick = function() {
+    window.scrollTo({
+        left: 0,
+        top: 0
+    })
+}
+
+const numberElements = $$('.number');
+const analogApp = {
+    displayNumbers: function() {
+        let rotate = 0;
+        numberElements.forEach(function(element) {
+            rotate += 30;
+            element.style.transform = `rotate(${rotate}deg)`;
+        })
+    },
+    start: function() {
+        this.displayNumbers();
+    }
+}
+
+analogApp.start();

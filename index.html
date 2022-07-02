@@ -4,36 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My clock</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div class="analog-clock clock__face">
-        <span class="number number--size-l">12</span>
-        <span class="number number--size-m">01</span>
-        <span class="number number--size-m">02</span>
-        <span class="number number--size-l">03</span>
-        <span class="number number--size-m">04</span>
-        <span class="number number--size-m">05</span>
-        <span class="number number--size-l">06</span>
-        <span class="number number--size-m">07</span>
-        <span class="number number--size-m">08</span>
-        <span class="number number--size-l">09</span>
-        <span class="number number--size-m">10</span>
-        <span class="number number--size-m">11</span>
-        <div class="hand-wrapper">
-            <span class="hand hand--center"></span>
+    <div class="app ">
+        <nav class="nav">
+            <div class="grid wide">
+                <button class="nav__btn nav__btn--open">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#analog" class="nav__link">Analog Clock</a></li>
+                    <li class="nav__item"><a href="#digital" class="nav__link">Digital Clock</a></li>
+                    <li class="nav__item"><a href="#counter" class="nav__link">Counter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="grid wide">
+                <section id="analog">
+                    <div class="analog">
+                        <span class="number">1</span>
+                        <span class="number">2</span>
+                        <span class="number number--size-l">3</span>
+                        <span class="number">4</span>
+                        <span class="number">5</span>
+                        <span class="number number--size-l">6</span>
+                        <span class="number">7</span>
+                        <span class="number">8</span>
+                        <span class="number number--size-l">9</span>
+                        <span class="number">10</span>
+                        <span class="number">11</span>
+                        <span class="number number--size-l">12</span>
+                    </div>
+                </section>
+                <section id="digital">
+                    Digital
+                </section>
+                <section id="counter">
+                    Counter
+                </section>
+            </div>
         </div>
-        <div class="hand-wrapper" id="hand-minute">
-            <span class="hand hand--minute"></span>
+        <div class="btn-go-to-top">
+            <span class="material-symbols-outlined">
+                pan_tool_alt
+            </span>
         </div>
-        <div class="hand-wrapper" id="hand-hour">
-            <span class="hand hand--hour"></span>
-        </div>
-        <div class="hand-wrapper" id="hand-second">
-            <span class=" hand hand--second"></span>
-        </div>
-        
+        <footer>
+            <p>Made by huynhmi1209@gmail.com</p>
+        </footer>
     </div>
     <script src="./app.js"></script>
 </body>
