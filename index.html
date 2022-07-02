@@ -8,23 +8,32 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="clock">
-        <span class="number number1">1</span>
-        <span class="number number2">2</span>
-        <span class="number number3">3</span>
-        <span class="number number4">4</span>
-        <span class="number number5">5</span>
-        <span class="number number6">6</span>
-        <span class="number number7">7</span>
-        <span class="number number8">8</span>
-        <span class="number number9">9</span>
-        <span class="number number10">10</span>
-        <span class="number number11">11</span>
-        <span class="number number12">12</span>
-        <span class="hand hour" data-hour-hand></span>
-        <span class="hand minute" data-minute-hand></span>
-        <span class="hand second" data-second-hand></span>
-        <span class="center"></span>
+    <div class="analog-clock clock__face">
+        <span class="number number--size-l">12</span>
+        <span class="number number--size-m">01</span>
+        <span class="number number--size-m">02</span>
+        <span class="number number--size-l">03</span>
+        <span class="number number--size-m">04</span>
+        <span class="number number--size-m">05</span>
+        <span class="number number--size-l">06</span>
+        <span class="number number--size-m">07</span>
+        <span class="number number--size-m">08</span>
+        <span class="number number--size-l">09</span>
+        <span class="number number--size-m">10</span>
+        <span class="number number--size-m">11</span>
+        <div class="hand-wrapper">
+            <span class="hand hand--center"></span>
+        </div>
+        <div class="hand-wrapper" id="hand-minute">
+            <span class="hand hand--minute"></span>
+        </div>
+        <div class="hand-wrapper" id="hand-hour">
+            <span class="hand hand--hour"></span>
+        </div>
+        <div class="hand-wrapper" id="hand-second">
+            <span class=" hand hand--second"></span>
+        </div>
+        
     </div>
     <script src="./app.js"></script>
 </body>
