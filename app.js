@@ -27,13 +27,10 @@ function handleTimer() {
     hourHandElement.style.transform = `rotate(${hourDegs}deg)`;
     let minutesDeg = minutes*(360/60);
     minuteHandElement.style.transform = `rotate(${minutesDeg}deg)`;
-    let secondsDeg = second*(360/60) + 6;
+    let secondsDeg = second*(360/60);
     secondHandElement.style.transform = `rotate(${secondsDeg}deg)`;
 };
 
-function getRotate() {
-
-}
 setInterval(function() {
     handleTimer()
 }, 500);
