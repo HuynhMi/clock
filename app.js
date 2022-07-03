@@ -1,11 +1,11 @@
+import { analogApp } from "./analog.js";
+import { digitalApp } from "./digital.js";
+import { counterApp } from "./counter.js";
+
 const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 
 const btnNavOpen = $('.nav__btn--open');
-const navElement = $('.nav');
 const navListElement = $('.nav__list');
-const linkElements = $$('.nav__link');
-const containerElement = $('.container');
 const btnToTop = $('.btn-go-to-top');
 
 btnNavOpen.onclick = function() {
@@ -24,8 +24,7 @@ btnNavOpen.onclick = function() {
 
 window.onscroll = function() {
     const scrollY = window.scrollY;
-    console.log(scrollY);
-    if (scrollY > 400) {
+    if (scrollY > 200) {
         btnToTop.classList.add('show');
     } else {
         btnToTop.classList.remove('show');
@@ -39,18 +38,6 @@ btnToTop.onclick = function() {
     })
 }
 
-const numberElements = $$('.number');
-const analogApp = {
-    displayNumbers: function() {
-        let rotate = 0;
-        numberElements.forEach(function(element) {
-            rotate += 30;
-            element.style.transform = `rotate(${rotate}deg)`;
-        })
-    },
-    start: function() {
-        this.displayNumbers();
-    }
-}
-
+digitalApp.start();
 analogApp.start();
+counterApp.start();

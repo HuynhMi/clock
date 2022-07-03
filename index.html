@@ -28,6 +28,7 @@
         <div class="container">
             <div class="grid wide">
                 <section id="analog">
+                    <h1 class="section__heading">Analog</h1>
                     <div class="analog">
                         <span class="number">1</span>
                         <span class="number">2</span>
@@ -41,13 +42,43 @@
                         <span class="number">10</span>
                         <span class="number">11</span>
                         <span class="number number--size-l">12</span>
+
+                        <div class="hand__wrap hand__wrap--minute">
+                            <span class="hand hand--minute"></span>
+                        </div>
+                        <div class="hand__wrap hand__wrap--hour ">
+                            <span class="hand hand--hour"></span>
+                        </div>
+                        <div class="hand__wrap hand__wrap--second">
+                            <span class="hand hand--second"></span>
+                        </div>
+                        <div class="hand__center"></div>
                     </div>
                 </section>
                 <section id="digital">
-                    Digital
+                    <h1 class="section__heading">Digital</h1>
+                    <div class="digital__inner">
+                        <span class="digital__number--hour">00</span>
+                        <span>:</span>
+                        <span class="digital__number--minute">00</span>
+                        <span>:</span>
+                        <span class="digital__number--second">00</span>
+                    </div>
                 </section>
                 <section id="counter">
-                    Counter
+                    <h1 class="section__heading">Counter</h1>
+                    <div class="digital__inner">
+                        <span class="counter__number--minute">00</span>
+                        <span>:</span>
+                        <span class="counter__number--second">00</span>
+                        <span>:</span>
+                        <span class="counter__number--milionsecond">00</span>
+                    </div>
+                    <div class="counter__buttons">
+                        <button class="counter__btn--start">Start</button>
+                        <button class="counter__btn--end">End</button>
+                        <button class="counter__btn--reset">Reset</button>
+                    </div>
                 </section>
             </div>
         </div>
@@ -60,6 +91,6 @@
             <p>Made by huynhmi1209@gmail.com</p>
         </footer>
     </div>
-    <script src="./app.js"></script>
+    <script type="module" src="./app.js"></script>
 </body>
 </html>

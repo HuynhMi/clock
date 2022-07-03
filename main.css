@@ -2,6 +2,13 @@
 
 }
 
+.section__heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #57b9e7;
+}
+
 .nav {
     background-color: var(--white);
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
@@ -47,9 +54,62 @@
     letter-spacing: 2px;
 }
 
+
+/* hand */
+.hand__wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.hand {
+    height: 50%;
+    display: block;
+    margin: 5% auto 0px;
+}
+
+.hand--second {
+    width: 3px;
+    background-color: red;
+    height: 45%;
+    margin-top: 5%;
+}
+
+.hand--minute {
+    width: 6px;
+    background-color: blue;
+    height: 40%;
+    margin-top: 10%;
+    border-radius: 6px;
+}
+
+.hand--hour {
+    width: 8px;
+    background-color: blue;
+    height: 30%;
+    margin-top: 20%;
+    border-radius: 8px;
+    
+}
+
+.hand__center {
+    --size: 15px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: var(--size);
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .container {
     transition: all linear 300ms;
 }
+
 
 /* ANALOG */
 #analog {
@@ -80,18 +140,59 @@
     font-size: 1.8rem;
 }
 .number--size-l {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 600;
 }
 
 /* DIGITAL */
 #digital {
-    min-height: 400px;
 }
+
+.digital__inner {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.digital__number {
+}
+
 
 /* COUNTER */
 #counter {
     min-height: 400px;
+}
+
+.counter__buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+.counter__buttons button {
+    font-size: 2.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.counter__buttons button + button {
+    margin-left: 10px;
+}
+
+.counter__buttons button:hover {
+    opacity: 0.8;
+}
+
+.counter__btn--start {
+    background-color: #00ecb1;
+}
+
+.counter__btn--end {
+    background-color: #fa9b4d;
+}
+
+.counter__btn--reset {
+    background-color: #09ddec;
 }
 
 /* BTN GO TO TOP */
@@ -117,6 +218,10 @@
 
 .btn-go-to-top:hover {
     background-color: #57b9e7;
+}
+
+.btn-go-to-top:hover span {
+    color: white;
 }
 
 
